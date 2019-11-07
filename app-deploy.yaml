@@ -8,7 +8,7 @@ metadata:
     stack.appsody.dev/revision: 373a46418bbab996df0ba011cf8c739bf1159ac0
     stack.appsody.dev/tag: kabanero/nodejs-express:0.2
   labels:
-    image.opencontainers.org/title: myapp
+    image.opencontainers.org/title: dev.local/myapp
     stack.appsody.dev/version: 0.2.7
   name: myapp
   namespace: dc-demo
