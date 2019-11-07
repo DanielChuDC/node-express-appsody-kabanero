@@ -4,7 +4,7 @@ metadata:
   name: myapp
   namespace: dc-demo-1
 spec:
-  applicationImage: myapp
+  applicationImage: dev.local/myapp
   createKnativeService: true
   expose: true
   livenessProbe:
