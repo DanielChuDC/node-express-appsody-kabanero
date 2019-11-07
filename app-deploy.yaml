@@ -2,7 +2,7 @@ apiVersion: appsody.dev/v1beta1
 kind: AppsodyApplication
 metadata:
   name: myapp
-  namespace: ng-sg
+  namespace: ns-sg
 spec:
   applicationImage: myapp
   createKnativeService: true
