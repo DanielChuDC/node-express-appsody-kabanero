@@ -5,7 +5,7 @@ set -Eeuox pipefail
 ### Configuration ###
 
 # Resultant Appsody container image #
-DOCKER_IMAGE="${DOCKER_IMAGE:-docker-registry.default.svc:5000/dc-demo/myapp}"
+DOCKER_IMAGE="${DOCKER_IMAGE:-docker-registry.default.svc:5000/kabanero/myapp}"
 
 # Appsody project GitHub repository #
 APP_REPO="${APP_REPO:-https://github.com/dacleyra/appsody-hello-world/}"
