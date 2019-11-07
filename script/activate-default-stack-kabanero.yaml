@@ -1,0 +1,13 @@
+apiVersion: kabanero.io/v1alpha1
+kind: Kabanero
+metadata:
+  name: kabanero
+  namespace: kabanero
+spec:
+  version: "0.2.0"
+  collections:
+    repositories:
+    - name: central
+      url: https://github.com/kabanero-io/collections/releases/download/v0.2.0-rc1/kabanero-index.yaml
+      activateDefaultCollections: true
+

@@ -5,7 +5,7 @@ set -Eeuox pipefail
 ### Configuration ###
 
 # Resultant Appsody container image #
-DOCKER_IMAGE="${DOCKER_IMAGE:-docker-registry.default.svc:5000/kabanero/java-microprofile}"
+DOCKER_IMAGE="${DOCKER_IMAGE:-docker-registry.default.svc:5000/dc-demo/myapp}"
 
 # Appsody project GitHub repository #
 APP_REPO="${APP_REPO:-https://github.com/dacleyra/appsody-hello-world/}"
@@ -14,7 +14,7 @@ APP_REPO="${APP_REPO:-https://github.com/dacleyra/appsody-hello-world/}"
 namespace=kabanero
 
 # Cleanup
-oc -n ${namespace} delete pipelinerun java-microprofile-build-deploy-pipeline-run-kabanero || true
+oc -n ${namespace} delete pipelinerun nodejs-express-build-deploy-pipeline-run-kabanero || true
 oc -n ${namespace} delete pipelineresource docker-image git-source || true
 
 # Pipeline Resources: Source repo and destination container image
@@ -52,13 +52,13 @@ kind: PipelineRun
 metadata:
   labels:
     app: tekton-app
-    tekton.dev/pipeline: java-microprofile-build-deploy-pipeline
-  name: java-microprofile-build-deploy-pipeline-run-kabanero
+    tekton.dev/pipeline: nodejs-express-build-deploy-pipeline
+  name: nodejs-express-build-deploy-pipeline-run-kabanero
   namespace: kabanero
 spec:
   params: []
   pipelineRef:
-    name: java-microprofile-build-deploy-pipeline
+    name: nodejs-express-build-deploy-pipeline
   resources:
   - name: git-source
     resourceRef:

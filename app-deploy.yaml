@@ -6,10 +6,10 @@ metadata:
     stack.appsody.dev/configured: appsody/nodejs-express:0.2
     stack.appsody.dev/created: 2019-10-24T10:33:03+0000
     stack.appsody.dev/revision: 373a46418bbab996df0ba011cf8c739bf1159ac0
-    stack.appsody.dev/tag: appsody/nodejs-express:0.2.8
+    stack.appsody.dev/tag: appsody/nodejs-express:0.2.7
   labels:
     image.opencontainers.org/title: myapp
-    stack.appsody.dev/version: 0.2.8
+    stack.appsody.dev/version: 0.2.7
   name: myapp
   namespace: dc-demo
 spec:
