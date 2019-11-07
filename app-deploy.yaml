@@ -1,0 +1,42 @@
+apiVersion: appsody.dev/v1beta1
+kind: AppsodyApplication
+metadata:
+  annotations:
+    image.opencontainers.org/created: "2019-11-07T12:20:05+08:00"
+    stack.appsody.dev/configured: appsody/nodejs-express:0.2
+    stack.appsody.dev/created: 2019-10-24T10:33:03+0000
+    stack.appsody.dev/revision: 373a46418bbab996df0ba011cf8c739bf1159ac0
+    stack.appsody.dev/tag: appsody/nodejs-express:0.2.8
+  labels:
+    image.opencontainers.org/title: myapp
+    stack.appsody.dev/version: 0.2.8
+  name: myapp
+spec:
+  applicationImage: dev.local/myapp
+  createKnativeService: false
+  expose: true
+  livenessProbe:
+    failureThreshold: 12
+    httpGet:
+      path: /live
+      port: 3000
+    initialDelaySeconds: 5
+    periodSeconds: 2
+  monitoring:
+    labels:
+      k8s-app: myapp
+  readinessProbe:
+    failureThreshold: 12
+    httpGet:
+      path: /ready
+      port: 3000
+    initialDelaySeconds: 5
+    periodSeconds: 2
+    timeoutSeconds: 1
+  service:
+    annotations:
+      prometheus.io/scrape: "true"
+    port: 3000
+    type: NodePort
+  stack: nodejs-express
+  version: 1.0.0
