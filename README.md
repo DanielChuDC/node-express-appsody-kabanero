@@ -81,8 +81,9 @@ DOCKER_IMAGE="${DOCKER_IMAGE:-docker-registry.default.svc:5000/default/myapp}"
 
 
 7. You may run the command 
-`APP_REPO=https://github.com/DanielChuDC/node-express-appsody-kabanero ./appsody-tekton-example-manual-run.sh` to deploy your application
+`APP_REPO=https://github.com/DanielChuDC/node-express-appsody-kabanero ./script/node-express-appsody-tekton-example-manual-run.sh` to deploy your application
 
+`APP_REPO=https://github.com/dacleyra/appsody-hello-world/ ./script/appsody-tekton-example-manual-run.sh`
 
 
 
